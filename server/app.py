@@ -14,11 +14,15 @@ bcrypt.init_app(app)
 api = Api(app)
 
 from resources.auth import Signup, Login, Logout, CheckSession
+from resources.tasks import TaskList, TaskDetail
 
 api.add_resource(Signup, "/signup")
 api.add_resource(Login, "/login")
 api.add_resource(Logout, "/logout")
 api.add_resource(CheckSession, "/me")
+
+api.add_resource(TaskList, "/tasks")
+api.add_resource(TaskDetail, "/tasks/<int:id>")
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
