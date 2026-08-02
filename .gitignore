@@ -5,3 +5,5 @@ __pycache__/
 instance/
 cookies.txt
 server/cookies.txt
+bob_cookies.txt
+server/bob_cookies.txt
